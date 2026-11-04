@@ -2,12 +2,12 @@
   "sprzet": {
     "pixhawk": {
       "nazwa": "Pixhawk 6C",
-      "opis": "Kontroler lotu z oprogramowaniem ArduPilot. Obsługuje niskopoziomową stabilizację lotu i nawigację GPS.",
+      "opis": "Kontroler lotu z oprogramowaniem ArduPilot. Obsługuje niskopoziomową stabilizację lotu i nawigację GPS. Został wybrany ze względu na jego niezawodność, różnorodność portów i jakość wykonania. Specyfikacja: \n Procesor (FMU): STM32H743, 32-bitowy Arm® Cortex®-M7 @ 480 MHz, 2 MB Flash, 1 MB SRAM\nProcesor (IO): STM32F103, 32-bitowy Arm® Cortex®-M3 @ 72 MHz, 64 KB SRAM\nCzujniki: ICM-42688-P, BMI055 (akcelerometr/żyroskop); IST8310 (magnetometr); MS5611 (barometr)\nParametry napięcia: Maks. wejście 6 V; USB 4,75-5,25 V; szyna serwo 0-36 V\nParametry prądowe: limit Telem1 i GPS2 1,5 A; pozostałe porty łącznie 1,5 A\nTemperatura pracy: -25 °C do +85 °C\nWymiary: 84,8x44x12,4 mm\nWaga: 59,3 g (aluminiowa obudowa)",
       "obrazek": "/images/pixhawk.jpg"
     },
     "jetson": {
       "nazwa": "Nvidia Jetson Orin Nano",
-      "opis": "Komputer pokładowy do obliczeń sztucznej inteligencji. Przetwarza obraz z kamery i wykrywa obiekty używając modeli YOLO.",
+      "opis": "Komputer pokładowy do obliczeń sztucznej inteligencji. Przetwarza obraz z kamery i wykrywa obiekty używając modeli YOLO.\nWybrany ze względu na duży zapas mocy obliczeniowej umożliwiający przyszłą rozbudowę.\n Specyfikacja: \n Architektura NVIDIA Ampere z 1024 rdzeniami NVIDIA CUDA i 32 rdzeniami tensor\n 6-rdzeniowy Arm® Cortex-A78AE v8.2, 64-bitowy CPU6-rdzeniowy Arm® Cortex-A78AE v8.2, 64-bitowy CPU\n Wydajność AI: 67 TOPS\n 8 GB 128-bitowej pamięci LPDDR5 102 GB/s\n Wsparcie dla zewnętrznego NVMe\n Moc: 7 do 25 W",
       "obrazek": "/images/jetson.jpg"
     }
   },
