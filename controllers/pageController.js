@@ -21,6 +21,15 @@ const wyswietlSzczegolySprzetu = (req, res) => {
     }
 };
 
+const wyswietlArdupilot = (req, res) => {
+    const daneArdupilot = plikZDanych.oprogramowanie.ardupilot;
+    
+    res.render('ardupilot', { 
+        tytul: 'Oprogramowanie ArduPilot',
+        dane: daneArdupilot
+    });
+};
+
 const filtrujIWyswietlWydruki = (req, res) => {
     const szukanaFraza = req.query.nazwa ? req.query.nazwa.toLowerCase() : '';
     const wybranyMaterial = req.query.material || 'Wszystkie';
@@ -40,8 +49,29 @@ const filtrujIWyswietlWydruki = (req, res) => {
     });
 };
 
+
+const wyswietlSzczegolyWydruku = (req, res) => {
+    const idWydruku = parseInt(req.params.id); 
+    
+    const znalezionyWydruk = plikZDanych.wydruki.find(w => w.id === idWydruku);
+
+    if (znalezionyWydruk) {
+        res.render('wydruk_detale', { 
+            tytul: `Szczegóły wydruku: ${znalezionyWydruk.nazwa}`, 
+            wydruk: znalezionyWydruk 
+        });
+    } else {
+        res.status(404).render('error', { 
+            tytul: 'Błąd', 
+            wiadomosc: 'Nie znaleziono wydruku o podanym ID.' 
+        });
+    }
+};
+
 module.exports = {
     wyswietlStroneGlowna,
     wyswietlSzczegolySprzetu,
-    filtrujIWyswietlWydruki
+    filtrujIWyswietlWydruki,
+    wyswietlArdupilot,
+    wyswietlSzczegolyWydruku
 };

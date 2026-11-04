@@ -11,36 +11,48 @@
       "obrazek": "/images/jetson.jpg"
     }
   },
+  "oprogramowanie": {
+    "ardupilot": {
+      "nazwa": "ArduPilot",
+      "opis": "Oprogramowanie open-source działające na kontrolerze Pixhawk. W tym projekcie odpowiada za wykonywanie komend sterujących przesyłanych z Nvidia Jetson za pomocą protokołu MAVLink, stabilizację lotu oraz obsługę systemów bezpieczeństwa.",
+      "obrazek": "/images/ArduLogo.png"
+    }
+  },
   "wydruki": [
     {
       "id": 1,
       "nazwa": "Mocowanie kamery",
       "material": "PETG",
-      "gotoweDoPobrania": true
+      "gotoweDoPobrania": true,
+      "opis": "Specjalnie zaprojektowane mocowanie, zapewniające odpowiednie wyważenie gimbala."
     },
     {
       "id": 2,
       "nazwa": "Mocowanie na gimbal",
       "material": "PETG",
-      "gotoweDoPobrania": true
+      "gotoweDoPobrania": true,
+      "opis": "Uchwyt zaprojektowany specjalnie do zastosowanej ramy drona. Zapewnia sztywność i bezpieczeństo montażu"
     },
     {
       "id": 3,
       "nazwa": "Miękki uchwyt na baterię 3s",
       "material": "TPU",
-      "gotoweDoPobrania": true
+      "gotoweDoPobrania": true,
+      "opis": "Zaprojektowane pod baterie BetaFpv LAVA II 3s 680 mAh. Oryginalnie miał służyć do zabezpieczenia baterii w lotach FPV dronem SpeedyBee Mario Mini25"
     },
     {
       "id": 4,
       "nazwa": "Wydruk, którego jeszcze nie ma",
       "material": "PLA",
-      "gotoweDoPobrania": false
+      "gotoweDoPobrania": false,
+      "opis": "Dodano w celu weryfikacji ustawienia gotoweDoPobrania: false"
     },
     {
       "id": 5,
       "nazwa": "Wydruk zwracający błąd",
       "material": "ABS",
-      "gotoweDoPobrania": true
+      "gotoweDoPobrania": true,
+      "opis": "Dodano w celu weryfikacji działania obsługi błędu"
     }
   ],
   "aktualnosci": [

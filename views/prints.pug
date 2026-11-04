@@ -31,12 +31,16 @@ block content
     ul
       each wydruk in wydruki
         li(style="margin-bottom: 15px;")
-          strong #{wydruk.nazwa} 
-          span (Materiał: #{wydruk.material})
+          strong 
+            a(href=`/prints/wydruk/${wydruk.id}` style="color: #333; text-decoration: none;") #{wydruk.nazwa}
+          span  (Materiał: #{wydruk.material})
           br
+          
+          a(href=`/prints/wydruk/${wydruk.id}` style="color: #2196F3; font-size: 0.9em; margin-right: 10px;") [ Zobacz szczegóły ]
+          
           if wydruk.gotoweDoPobrania
             a(href=`/downloads/${wydruk.id}.3mf` style="color: #4CAF50; font-size: 0.9em;") [ Pobierz plik .3mf ]
           else
-            span(style="color: #999; font-size: 0.9em;") (Brak pliku do pobrania - w trakcie projektowania)
+            span(style="color: #999; font-size: 0.9em;") (Brak pliku do pobrania)
   else
     p(style="color: red;") Brak wydruków spełniających kryteria.

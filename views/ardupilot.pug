@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 #{tytul}
+  
+  div(style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px;")
+    div(style="text-align: center; margin-bottom: 20px;")
+      img(src=dane.obrazek alt="Logo ArduPilot" style="max-width: 300px; border-radius: 8px;")
+    
+    h2 Rola w systemie
+    p #{dane.opis}
+    
+    h3 Kluczowe zadania w locie:
+    ul(style="line-height: 1.6;")
+      li Odbieranie wektorów ruchu i celu z modelu sztucznej inteligencji (YOLO na Jetsonie).
+      li Fuzja danych z czujników (IMU, magnetometr, GPS) w celu precyzyjnej orientacji w przestrzeni.
+      li Autonomiczne zarządzanie bezpieczeństwem (np. tryb Return To Launch) na wypadek utraty łączności.
