@@ -1,0 +1,63 @@
+{
+  "sprzet": {
+    "pixhawk": {
+      "nazwa": "Pixhawk 6C",
+      "opis": "Kontroler lotu z oprogramowaniem ArduPilot. Obsługuje niskopoziomową stabilizację lotu i nawigację GPS.",
+      "obrazek": "/images/pixhawk.jpg"
+    },
+    "jetson": {
+      "nazwa": "Nvidia Jetson Orin Nano",
+      "opis": "Komputer pokładowy do obliczeń sztucznej inteligencji. Przetwarza obraz z kamery i wykrywa obiekty używając modeli YOLO.",
+      "obrazek": "/images/jetson.jpg"
+    }
+  },
+  "wydruki": [
+    {
+      "id": 1,
+      "nazwa": "Mocowanie kamery",
+      "material": "PETG",
+      "gotoweDoPobrania": true
+    },
+    {
+      "id": 2,
+      "nazwa": "Mocowanie na gimbal",
+      "material": "PETG",
+      "gotoweDoPobrania": true
+    },
+    {
+      "id": 3,
+      "nazwa": "Miękki uchwyt na baterię 3s",
+      "material": "TPU",
+      "gotoweDoPobrania": true
+    },
+    {
+      "id": 4,
+      "nazwa": "Wydruk, którego jeszcze nie ma",
+      "material": "PLA",
+      "gotoweDoPobrania": false
+    },
+    {
+      "id": 5,
+      "nazwa": "Wydruk zwracający błąd",
+      "material": "ABS",
+      "gotoweDoPobrania": true
+    }
+  ],
+  "aktualnosci": [
+    {
+      "id": 1,
+      "tytul": "Zbudowano platformę testową",
+      "zdjecie": "/images/dron.jpg"
+    },
+    {
+      "id": 2,
+      "tytul": "Pierwsze polowe testy śledzenia",
+      "zdjecie": "/images/first_test.jpg"
+    },
+    {
+      "id": 1793814062221,
+      "tytul": "Pierwsze testy śledzenia samochodu",
+      "zdjecie": "/images/1793814062217_first_car_test.jpg"
+    }
+  ]
+}

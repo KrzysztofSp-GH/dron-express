@@ -1,0 +1,17 @@
+doctype html
+html(lang="pl")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{tytul} - Dron AI
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    nav
+      a(href="/") Strona Główna
+      a(href="/hardware/pixhawk") Pixhawk 6C
+      a(href="/hardware/jetson") Jetson Orin Nano
+      a(href="/prints") Wydruki 3D
+      a(href="/admin") Aktualności
+    
+    div.container
+      block content

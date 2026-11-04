@@ -1,0 +1,17 @@
+{
+  "name": "projekt_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.22.3",
+    "multer": "^2.5.0",
+    "pug": "^3.0.4"
+  }
+}

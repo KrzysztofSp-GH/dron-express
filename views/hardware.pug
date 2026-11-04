@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Specyfikacja sprzętu
+  
+  if sprzet
+    h2 Nazwa komponentu: #{sprzet.nazwa}
+    div(style="padding: 15px; border-left: 4px solid #4CAF50; background-color: #f9f9f9; display: flex; gap: 20px; align-items: flex-start;")
+      
+      img(src=sprzet.obrazek alt=sprzet.nazwa style="max-width: 250px; border-radius: 8px;")
+      div
+        p <strong>Opis techniczny:</strong> #{sprzet.opis}
+  else
+    h2 Błąd
+    p Nie znaleziono informacji o tym komponencie.

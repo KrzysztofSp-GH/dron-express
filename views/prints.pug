@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  h1 Moje wydruki 3D do drona
+  
+  div(style="text-align: center; margin-bottom: 25px; background: white; padding: 15px; border-radius: 8px;")
+    img(src="/images/drukarka.jpg" alt="Moja drukarka 3D - Bambu Lab" style="max-width: 100%; max-height: 350px; border-radius: 8px;")
+    p(style="color: #666; font-size: 0.9em; margin-top: 10px;") Moja drukarka 3D Bambu Lab P2S do szybkiego prototypowania elementów ramy i mocowań.
+  
+  h3 Filtruj modele
+  form(action="/prints" method="GET" style="background: #eee; padding: 15px; border-radius: 5px; margin-bottom: 20px;")
+    label Nazwa elementu:
+    input(type="text" name="nazwa" placeholder="Np. Mocowanie kamery")
+    
+    label Materiał:
+    select(name="material")
+      option(value="Wszystkie") Wszystkie
+      option(value="PETG") PETG
+      option(value="ABS") ABS
+      option(value="PLA") PLA 
+      option(value="TPU") TPU
+      
+    div.checkbox-group
+      input(type="checkbox" name="gotowe" id="gotowe")
+      label(for="gotowe") Pokaż tylko pliki gotowe do pobrania (.3mf)
+      
+    button.btn(type="submit") Zastosuj filtry
+
+  h3 Wyniki:
+  if wydruki.length > 0
+    ul
+      each wydruk in wydruki
+        li(style="margin-bottom: 15px;")
+          strong #{wydruk.nazwa} 
+          span (Materiał: #{wydruk.material})
+          br
+          if wydruk.gotoweDoPobrania
+            a(href=`/downloads/${wydruk.id}.3mf` style="color: #4CAF50; font-size: 0.9em;") [ Pobierz plik .3mf ]
+          else
+            span(style="color: #999; font-size: 0.9em;") (Brak pliku do pobrania - w trakcie projektowania)
+  else
+    p(style="color: red;") Brak wydruków spełniających kryteria.
